@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { INDUSTRIES, BENEFITS, TESTIMONIALS } from '@/data'
 import { SectionHeader } from '@/components/ui/index'
 import { scrollToSection } from '@/lib/utils'
+import { SiteIcon } from '@/components/ui/SiteIcon'
 
 const CONTACT_OFFICES = [
   {
@@ -42,6 +43,12 @@ const CONTACT_OFFICES = [
     address: ['GIDC Char Rasta, Vapi'],
     phones: ['+91 8469741415'],
   },
+]
+
+const CONTACT_EMAILS = [
+  'sales@arteyaiot.in',
+  'support@atreyaiot.in',
+  'info@atreyaiot.in',
 ]
 
 // ── INDUSTRIES ───────────────────────
@@ -146,7 +153,7 @@ export function BenefitsSection() {
               className="absolute -bottom-7 -right-7 bg-white rounded-2xl p-6 shadow-brand-xl border border-border min-w-[220px]"
             >
               <div className="flex items-center gap-2 text-[0.85rem] font-bold text-ink mb-4">
-                📊 Live Performance
+                <SiteIcon token="📊" className="w-4 h-4" /> Live Performance
               </div>
               {[
                 { label: 'Power Factor', val: '0.97', pct: 97, color: '#0052CC' },
@@ -193,7 +200,7 @@ export function BenefitsSection() {
                   className="w-[46px] h-[46px] rounded-[12px] flex items-center justify-center text-[1.1rem] flex-shrink-0"
                   style={{ background: b.bg }}
                 >
-                  {b.icon}
+                  <SiteIcon token={b.icon} className="w-5 h-5" />
                 </div>
                 <div>
                   <h4 className="font-bold text-[0.9rem] text-ink mb-[5px]">{b.title}</h4>
@@ -246,7 +253,7 @@ export function AboutSection() {
             whileHover={{ y: -6, background: 'rgba(255,255,255,0.16)' }}
             className="glass-dark border border-white/18 rounded-3xl p-10 transition-all duration-300"
           >
-            <div className="w-[58px] h-[58px] rounded-[14px] bg-white/12 border border-white/18 flex items-center justify-center text-[1.5rem] mb-6">🌍</div>
+            <div className="w-[58px] h-[58px] rounded-[14px] bg-white/12 border border-white/18 flex items-center justify-center text-[1.5rem] mb-6"><SiteIcon token="🌍" className="w-7 h-7 text-white" /></div>
             <h3 className="font-display font-bold text-[1.65rem] text-yellow mb-4">Our Vision</h3>
             <p className="text-[0.9rem] text-white/80 leading-[1.78]">
               To be among the global leaders in the management and conservation of Energy and the Environment — delivering intelligent systems that power a sustainable future for all.
@@ -262,7 +269,7 @@ export function AboutSection() {
             whileHover={{ y: -6, background: 'rgba(255,255,255,0.16)' }}
             className="glass-dark border border-white/18 rounded-3xl p-10 transition-all duration-300"
           >
-            <div className="w-[58px] h-[58px] rounded-[14px] bg-white/12 border border-white/18 flex items-center justify-center text-[1.5rem] mb-6">⚡</div>
+            <div className="w-[58px] h-[58px] rounded-[14px] bg-white/12 border border-white/18 flex items-center justify-center text-[1.5rem] mb-6"><SiteIcon token="⚡" className="w-7 h-7 text-white" /></div>
             <h3 className="font-display font-bold text-[1.65rem] text-yellow mb-4">Our Mission</h3>
             <p className="text-[0.9rem] text-white/80 leading-[1.78] mb-5">
               To help customers save energy and the environment through expertise and innovation in consulting and products.
@@ -277,7 +284,7 @@ export function AboutSection() {
                   transition={{ delay: i * 0.1 + 0.3 }}
                   className="flex items-start gap-3 py-2 border-b border-white/[0.08] text-[0.85rem] text-white/72"
                 >
-                  <span className="text-yellow text-[11px] mt-[3px] flex-shrink-0">✦</span>
+                  <SiteIcon token="check" className="text-yellow w-3.5 h-3.5 mt-[2px] flex-shrink-0" />
                   {pt}
                 </motion.li>
               ))}
@@ -363,7 +370,7 @@ export function CTASection() {
           className="text-center"
         >
           <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/30 px-5 py-2 rounded-full mb-6 text-[0.7rem] font-bold text-white uppercase tracking-[0.15em]">
-            🚀 Get Started Today
+            <SiteIcon token="rocket" className="w-3.5 h-3.5" /> Get Started Today
           </div>
           <h2 className="font-display font-bold text-[clamp(2rem,3.8vw,3.2rem)] text-white tracking-[-0.02em] leading-[1.1] mb-5">
             Ready to <em className="not-italic text-ink">Transform</em> Your Energy Operations?
@@ -378,21 +385,21 @@ export function CTASection() {
               whileTap={{ scale: 0.97 }}
               className="flex items-center gap-2 bg-white text-blue font-extrabold text-[0.9rem] px-9 py-4 rounded-full shadow-[0_6px_24px_rgba(0,0,0,0.15)]"
             >
-              ▶ Request a Demo
+              <SiteIcon token="play" className="w-4 h-4" /> Request a Demo
             </motion.button>
             <motion.button
               whileHover={{ y: -3, background: 'rgba(255,255,255,0.22)' }}
               whileTap={{ scale: 0.97 }}
               className="flex items-center gap-2 bg-white/12 backdrop-blur-sm text-white font-bold text-[0.9rem] px-9 py-4 rounded-full border border-white/55"
             >
-              ⬇ Download Brochure
+              <SiteIcon token="download" className="w-4 h-4" /> Download Brochure
             </motion.button>
           </div>
 
           <div className="flex gap-5 justify-center flex-wrap">
             {['No upfront cost consultation', 'Free energy audit report', 'ROI guaranteed analysis'].map((chip) => (
               <span key={chip} className="flex items-center gap-2 text-[0.78rem] text-white/85 font-semibold">
-                <span className="text-yellow">✓</span>{chip}
+                <SiteIcon token="check" className="text-yellow w-3.5 h-3.5" />{chip}
               </span>
             ))}
           </div>
@@ -420,14 +427,28 @@ export function CTASection() {
                 ))}
                 <div className="mt-2.5 flex flex-col gap-1">
                   {office.phones.map((phone) => (
-                    <p key={phone} className="text-[0.78rem] text-yellow">☎ {phone}</p>
+                    <p key={phone} className="text-[0.78rem] text-yellow inline-flex items-center gap-1.5"><SiteIcon token="phone" className="w-3.5 h-3.5" /> {phone}</p>
                   ))}
                 </div>
               </div>
             ))}
           </div>
 
-          <p className="text-center text-[0.82rem] text-white/90 mt-6">✉ info@atreyaiot.com</p>
+          <div className="mt-6 rounded-2xl border border-white/20 bg-white/10 p-4 md:p-5">
+            <p className="text-[0.82rem] text-white font-bold mb-3 text-center">Email Contacts</p>
+            <div className="flex flex-col md:flex-row md:flex-wrap items-center justify-center gap-3 md:gap-4">
+              {CONTACT_EMAILS.map((email) => (
+                <a
+                  key={email}
+                  href={`mailto:${email}`}
+                  className="inline-flex items-center gap-2 text-[0.8rem] text-yellow hover:text-white transition-colors"
+                >
+                  <SiteIcon token="mail" className="w-4 h-4" />
+                  {email}
+                </a>
+              ))}
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>

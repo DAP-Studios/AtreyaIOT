@@ -1,8 +1,11 @@
 'use client'
 import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image'
 import { cn, scrollToSection } from '@/lib/utils'
 import { NAV_ITEMS } from '@/data'
+import logo from '@/assets/icon.png'
+import { SiteIcon } from '@/components/ui/SiteIcon'
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -31,17 +34,14 @@ export function Navbar() {
       <div className="max-w-[1320px] mx-auto px-5 h-[72px] flex items-center justify-between gap-6">
         {/* Brand */}
         <button onClick={() => scrollToSection('hero')} className="flex items-center gap-3 group flex-shrink-0">
-          <div className="w-[42px] h-[42px] rounded-[11px] bg-gradient-primary flex items-center justify-center shadow-[0_4px_16px_rgba(0,82,204,0.3)] transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-105">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path d="M12 3L20 19H4Z" fill="none" stroke="white" strokeWidth="1.8" strokeLinejoin="round"/>
-              <circle cx="12" cy="14" r="3" fill="none" stroke="rgba(255,255,255,0.8)" strokeWidth="1.4"/>
-            </svg>
+          <div className="w-[42px] h-[42px] rounded-[11px]  flex items-center justify-center ">
+            <Image src={logo} alt="Atreya IoT" width={34} height={34} className="object-contain" priority />
           </div>
           <div className="leading-tight">
-            <div className="font-display font-bold text-[1rem] text-ink tracking-wide">
-              ATREYA <span className="text-cyan-dark">IoT</span>
+            <div className="font-arial font-bold text-[1.25rem] text-ink tracking-narrow">
+              Atreya<span className="text-cyan-dark">IoT</span>
             </div>
-            <div className="text-[10px] text-mist tracking-[0.12em] uppercase">& Automation</div>
+            <div className="text-[10px] text-black tracking-[0.12em] uppercase">& Automation</div>
           </div>
         </button>
 
@@ -70,7 +70,7 @@ export function Navbar() {
         {/* Actions */}
         <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
           <a href="tel:+917900000000" className="flex items-center gap-2 px-[14px] py-[9px] rounded-[10px] text-[0.8rem] font-semibold text-slate hover:bg-cool hover:text-blue transition-all duration-200">
-            📞 <span>Call Us</span>
+            <SiteIcon token="phone" className="w-4 h-4" /> <span>Call Us</span>
           </a>
           <motion.button
             whileHover={{ y: -2, boxShadow: '0 8px 32px rgba(0,82,204,0.4)' }}
@@ -79,7 +79,7 @@ export function Navbar() {
             className="flex items-center gap-2 bg-gradient-primary text-white font-bold text-[0.82rem] px-6 py-[11px] rounded-full shadow-[0_4px_18px_rgba(0,82,204,0.28)] transition-all duration-200"
           >
             <span>Get a Demo</span>
-            <span className="text-[10px]">→</span>
+            <SiteIcon token="arrow-right" className="w-3.5 h-3.5" />
           </motion.button>
         </div>
 
@@ -118,9 +118,9 @@ export function Navbar() {
               <div className="pt-3 mt-2 border-t border-border flex gap-3">
                 <button
                   onClick={() => { scrollToSection('cta'); setMobileOpen(false) }}
-                  className="flex-1 bg-gradient-primary text-white font-bold text-sm py-3 rounded-full text-center"
+                  className="flex-1 bg-gradient-primary text-white font-bold text-sm py-3 rounded-full text-center inline-flex items-center justify-center gap-2"
                 >
-                  Get a Demo →
+                  Get a Demo <SiteIcon token="arrow-right" className="w-3.5 h-3.5" />
                 </button>
               </div>
             </div>
@@ -171,7 +171,7 @@ function DropdownItem({ item, activeSection }: { item: typeof NAV_ITEMS[0]; acti
                 className="w-full flex items-center gap-3 px-[13px] py-[11px] rounded-[10px] hover:bg-cool transition-colors duration-150 text-left"
               >
                 <span className="w-[38px] h-[38px] rounded-[9px] flex items-center justify-center text-[0.9rem] flex-shrink-0" style={{ background: child.bg }}>
-                  {child.icon}
+                  <SiteIcon token={child.icon} className="w-[18px] h-[18px]" />
                 </span>
                 <span>
                   <strong className="block text-[0.82rem] font-bold text-ink">{child.label}</strong>

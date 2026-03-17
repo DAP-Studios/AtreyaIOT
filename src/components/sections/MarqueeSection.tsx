@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { EXPERTISE, SERVICES } from '@/data'
 import { SectionHeader } from '@/components/ui/index'
 import { scrollToSection } from '@/lib/utils'
+import { SiteIcon } from '@/components/ui/SiteIcon'
 
 // ── MARQUEE ─────────────────────────
 const MARQUEE_ITEMS = [
@@ -35,7 +36,7 @@ export function MarqueeStrip() {
             key={i}
             className="inline-flex items-center gap-2 text-[0.74rem] font-bold text-white/88 uppercase tracking-[0.1em] px-7 border-r border-white/18"
           >
-            <span className="text-yellow">{item.icon}</span>
+            <SiteIcon token={item.icon} className="text-yellow w-3.5 h-3.5" />
             {item.label}
           </span>
         ))}
@@ -95,7 +96,7 @@ export function ExpertiseSection() {
                   className="w-[52px] h-[52px] rounded-[12px] flex items-center justify-center text-[1.3rem] mb-4"
                   style={{ background: item.colorBg }}
                 >
-                  {item.icon}
+                  <SiteIcon token={item.icon} className="w-5 h-5" />
                 </div>
                 <h3 className="font-display font-bold text-[1.1rem] text-ink mb-3">{item.title}</h3>
                 <p className="text-[0.86rem] text-slate leading-[1.72] mb-5">{item.desc}</p>
@@ -104,7 +105,7 @@ export function ExpertiseSection() {
                   className="text-[0.82rem] font-bold transition-[gap] duration-200 flex items-center gap-2 hover:gap-4"
                   style={{ color: item.color }}
                 >
-                  Learn More <span>→</span>
+                  Learn More <SiteIcon token="arrow-right" className="w-3.5 h-3.5" />
                 </button>
               </div>
             </motion.div>
@@ -151,7 +152,7 @@ export function ServicesSection() {
                   : 'border-border bg-white text-slate hover:-translate-y-[2px] hover:border-blue/30 hover:text-blue'
               }`}
             >
-              <span>{s.icon}</span>{s.label}
+              <SiteIcon token={s.icon} className="w-4 h-4" />{s.label}
             </motion.button>
           ))}
         </div>
@@ -182,7 +183,7 @@ export function ServicesSection() {
                   className="w-[40px] h-[40px] rounded-[10px] flex items-center justify-center text-[1.1rem] flex-shrink-0"
                   style={{ background: `${active.badgeColor}1A` }}
                 >
-                  {active.badgeIcon}
+                  <SiteIcon token={active.badgeIcon} className="w-5 h-5" />
                 </div>
                 <div>
                   <strong className="block text-[0.84rem] font-bold text-ink">{active.badgeTitle}</strong>
@@ -207,7 +208,7 @@ export function ServicesSection() {
                     className="flex items-start gap-4 p-4 bg-white rounded-[12px] border border-border shadow-brand-sm transition-all duration-200"
                   >
                     <div className="w-[38px] h-[38px] rounded-[9px] flex items-center justify-center text-[0.9rem] flex-shrink-0" style={{ background: f.bg }}>
-                      {f.icon}
+                      <SiteIcon token={f.icon} className="w-[18px] h-[18px]" />
                     </div>
                     <div>
                       <strong className="block text-[0.84rem] font-bold text-ink mb-[2px]">{f.title}</strong>
@@ -223,7 +224,7 @@ export function ServicesSection() {
                   whileTap={{ scale: 0.97 }}
                   className="flex items-center gap-2 bg-gradient-primary text-white font-bold text-[0.84rem] px-7 py-[13px] rounded-full shadow-[0_4px_18px_rgba(0,82,204,0.25)]"
                 >
-                  → Learn More
+                  <SiteIcon token="arrow-right" className="w-4 h-4" /> Learn More
                 </motion.button>
                 <motion.button
                   whileHover={{ y: -3, background: '#EBF2FF' }}
@@ -231,7 +232,7 @@ export function ServicesSection() {
                   onClick={() => scrollToSection('cta')}
                   className="flex items-center gap-2 text-blue font-bold text-[0.84rem] px-7 py-[12px] rounded-full border-2 border-blue"
                 >
-                  📞 Contact Us
+                  <SiteIcon token="phone" className="w-4 h-4" /> Contact Us
                 </motion.button>
               </div>
             </div>

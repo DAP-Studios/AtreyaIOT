@@ -6,6 +6,7 @@ import { HERO_SLIDES, STATS } from '@/data'
 import { scrollToSection } from '@/lib/utils'
 import { useInView } from 'react-intersection-observer'
 import CountUp from 'react-countup'
+import { SiteIcon } from '@/components/ui/SiteIcon'
 
 const overlays = [
   'linear-gradient(135deg,rgba(8,15,30,0.82) 0%,rgba(0,52,153,0.52) 55%,rgba(0,212,232,0.22) 100%)',
@@ -125,19 +126,12 @@ export function HeroSection() {
                 className="flex gap-4 justify-center flex-wrap"
               >
                 <motion.button
-                  whileHover={{ y: -3, boxShadow: '0 12px 40px rgba(0,212,232,0.45)' }}
-                  whileTap={{ scale: 0.97 }}
-                  className="flex items-center gap-2 bg-gradient-to-r from-yellow to-cyan text-ink font-extrabold text-[0.9rem] px-9 py-4 rounded-full shadow-[0_6px_28px_rgba(0,212,232,0.3)] transition-all"
-                >
-                  ▶ {slide.cta}
-                </motion.button>
-                <motion.button
                   whileHover={{ y: -3, background: 'rgba(255,255,255,0.2)' }}
                   whileTap={{ scale: 0.97 }}
                   onClick={() => scrollToSection('services')}
-                  className="flex items-center gap-2 bg-white/10 backdrop-blur-[10px] text-white font-bold text-[0.9rem] px-9 py-4 rounded-full border border-white/40 transition-all"
+                  className="flex items-center gap-2 bg-gradient-to-r from-yellow to-cyan text-ink font-extrabold text-[0.9rem] px-9 py-4 rounded-full shadow-[0_6px_28px_rgba(0,212,232,0.3)] transition-all"
                 >
-                  ↓ {slide.ctaSecondary}
+                  <SiteIcon token="arrow-down" className="w-4 h-4" /> {slide.ctaSecondary}
                 </motion.button>
               </motion.div>
 
@@ -192,7 +186,7 @@ export function HeroSection() {
           {STATS.map((stat) => (
             <div key={stat.id} className="flex-1 flex items-center justify-center gap-4 py-5 px-3">
               <div className="w-[40px] h-[40px] rounded-[10px] bg-cool flex items-center justify-center text-[0.9rem] text-blue flex-shrink-0">
-                {stat.icon}
+                <SiteIcon token={stat.icon} className="w-[18px] h-[18px]" />
               </div>
               <div>
                 <div className="font-display font-bold text-[1.7rem] leading-none bg-gradient-primary bg-clip-text text-transparent">

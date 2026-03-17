@@ -2,6 +2,8 @@
 import { useEffect, useState, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { cn } from '@/lib/utils'
+import Image from 'next/image'
+import logoWhite from '@/assets/logo white.png'
 
 // ── Progress Bar ──────────────────────
 export function ProgressBar() {
@@ -78,14 +80,11 @@ export function PageLoader() {
     >
       <div className="text-center w-[260px]">
         <div className="flex items-center justify-center gap-3 mb-8">
-          <div className="w-[52px] h-[52px] rounded-[14px] bg-gradient-primary flex items-center justify-center shadow-brand-lg">
-            <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
-              <path d="M15 4L24 22H6Z" fill="none" stroke="white" strokeWidth="2" strokeLinejoin="round"/>
-              <circle cx="15" cy="16" r="4" fill="none" stroke="rgba(255,255,255,0.8)" strokeWidth="1.5"/>
-            </svg>
+          <div className="w-[52px] h-[52px] rounded-[14px] bg-white/[0.1] border border-white/20 flex items-center justify-center shadow-brand-lg overflow-hidden">
+            <Image src={logoWhite} alt="Atreya IoT" width={60} height={60} className="object-contain" priority />
           </div>
           <div>
-            <div className="font-display font-bold text-lg text-white">ATREYA <span className="text-cyan">IoT</span></div>
+            <div className="font-areil font-bold text-lg text-white">Atreya<span className="text-cyan">IoT</span></div>
           </div>
         </div>
         <div className="h-[3px] bg-white/10 rounded-full overflow-hidden mb-4">

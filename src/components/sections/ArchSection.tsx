@@ -6,12 +6,19 @@ import CountUp from 'react-countup'
 import { ARCH_STEPS, STATS, MACGRID_MODULES } from '@/data'
 import { SectionHeader } from '@/components/ui/index'
 import { scrollToSection } from '@/lib/utils'
+import { SiteIcon } from '@/components/ui/SiteIcon'
 
 // ── ARCHITECTURE ─────────────────────
 export function ArchitectureSection() {
   const commItems = [
-    '📡 Data Cable','🔆 Fiber Optic','🌐 Ethernet LAN','📶 WiFi Wireless',
-    '📱 GSM Modem','📻 GPRS','✉️ Auto Email','💬 Auto SMS',
+    { icon: '📡', label: 'Data Cable' },
+    { icon: '🔆', label: 'Fiber Optic' },
+    { icon: '🌐', label: 'Ethernet LAN' },
+    { icon: '📶', label: 'WiFi Wireless' },
+    { icon: '📱', label: 'GSM Modem' },
+    { icon: '📻', label: 'GPRS' },
+    { icon: '✉️', label: 'Auto Email' },
+    { icon: '💬', label: 'Auto SMS' },
   ]
 
   return (
@@ -52,7 +59,7 @@ export function ArchitectureSection() {
                   className="w-[72px] h-[72px] rounded-full flex items-center justify-center text-[1.4rem] text-white border-4 border-white shadow-brand-md mb-5"
                   style={{ background: `linear-gradient(135deg, ${step.color}, ${step.color2})` }}
                 >
-                  {step.icon}
+                  <SiteIcon token={step.icon} className="w-7 h-7" />
                 </motion.div>
                 <motion.div
                   whileHover={{ y: -4, borderColor: '#00D4E8', boxShadow: '0 12px 48px rgba(0,82,204,0.12)' }}
@@ -82,12 +89,12 @@ export function ArchitectureSection() {
         >
           {commItems.map((item) => (
             <motion.div
-              key={item}
+              key={item.label}
               whileHover={{ y: -3, borderColor: '#00D4E8', color: '#0052CC' }}
               className="bg-white border border-border rounded-[12px] py-4 px-2 text-center text-[0.73rem] font-bold text-slate flex flex-col items-center gap-2 cursor-default transition-all duration-200"
             >
-              <span className="text-[1.1rem]">{item.split(' ')[0]}</span>
-              <span className="leading-tight">{item.split(' ').slice(1).join(' ')}</span>
+              <SiteIcon token={item.icon} className="w-[18px] h-[18px]" />
+              <span className="leading-tight">{item.label}</span>
             </motion.div>
           ))}
         </motion.div>
@@ -124,7 +131,9 @@ export function StatsSection() {
               whileHover={{ background: 'rgba(255,255,255,0.04)' }}
               className="flex-1 text-center py-14 px-5 transition-colors duration-300"
             >
-              <span className="text-[2.2rem] block mb-4">{stat.icon}</span>
+              <span className="block mb-4">
+                <SiteIcon token={stat.icon} className="w-8 h-8 text-white mx-auto" />
+              </span>
               <div className="flex items-baseline justify-center gap-1 mb-2">
                 <span className="font-display font-bold text-[3.2rem] text-white leading-none">
                   {inView ? <CountUp end={stat.num} duration={2.8} /> : 0}
@@ -257,7 +266,7 @@ export function MacgridSection() {
               </div>
 
               <div className="flex items-center gap-2 mt-4 font-mono text-[10px] text-green">
-                <span>✓</span>
+                <SiteIcon token="check" className="w-3 h-3" />
                 <span>All systems nominal · No active alarms · DB sync 2 min ago</span>
               </div>
             </div>
@@ -271,7 +280,7 @@ export function MacgridSection() {
             transition={{ duration: 0.75 }}
           >
             <div className="inline-flex items-center gap-2 px-[18px] py-[7px] rounded-full bg-blue/[0.08] border border-cyan/20 text-[0.7rem] font-bold text-cyan-dark tracking-[0.16em] uppercase mb-4">
-              🧩 8 Smart Modules
+              <SiteIcon token="🧩" className="w-3.5 h-3.5" /> 8 Smart Modules
             </div>
             <h3 className="font-display font-bold text-[2rem] text-ink tracking-[-0.02em] mb-4 leading-[1.2]">
               All-in-One EMS for Complete Energy Intelligence
@@ -292,7 +301,7 @@ export function MacgridSection() {
                   className="flex items-center gap-3 p-4 bg-cool rounded-[12px] border border-border transition-all duration-200 cursor-default"
                 >
                   <div className="w-[36px] h-[36px] rounded-[8px] flex items-center justify-center text-[0.88rem] flex-shrink-0" style={{ background: m.bg, color: m.color }}>
-                    {m.icon}
+                    <SiteIcon token={m.icon} className="w-4 h-4" />
                   </div>
                   <div>
                     <div className="font-bold text-[0.8rem] text-ink">{m.name}</div>
@@ -308,7 +317,7 @@ export function MacgridSection() {
               onClick={() => scrollToSection('cta')}
               className="flex items-center justify-center gap-2 w-full bg-gradient-primary text-white font-bold text-[0.86rem] py-4 rounded-full shadow-[0_4px_18px_rgba(0,82,204,0.22)]"
             >
-              Request Smart AI EMS Demo →
+              Request Smart AI EMS Demo <SiteIcon token="arrow-right" className="w-4 h-4" />
             </motion.button>
           </motion.div>
         </div>
