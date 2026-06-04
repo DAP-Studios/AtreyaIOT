@@ -4,21 +4,10 @@ import type {
 } from '@/types'
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: 'Home', href: '#hero' },
-  {
-    label: 'Solutions', href: '#services',
-    children: [
-      { label: 'EMS Platform',   sub: 'Real-time SCADA monitoring', href: '#services', icon: '🖥️', color: '#0052CC', bg: 'rgba(0,82,204,0.1)',   tab: 'ems' },
-      { label: 'IoT Cloud',      sub: 'Wireless connectivity',       href: '#services', icon: '📡', color: '#00A8BB', bg: 'rgba(0,212,232,0.1)',  tab: 'iot' },
-      { label: 'Energy Audit',   sub: 'Way2Save program',            href: '#services', icon: '🌿', color: '#009950', bg: 'rgba(0,201,110,0.1)', tab: 'audit' },
-      { label: 'Smart Metering', sub: 'Energy meters & hardware',    href: '#services', icon: '⚡', color: '#E6B800', bg: 'rgba(255,208,0,0.12)', tab: 'meter' },
-      { label: 'Control Apps',   sub: 'PF & demand control',         href: '#services', icon: '🎚️', color: '#7c3aed', bg: 'rgba(124,58,237,0.08)', tab: 'ctrl' },
-    ],
-  },
-  { label: 'Architecture', href: '#architecture' },
-  { label: 'Smart AI EMS', href: '#macgrid' },
-  { label: 'Industries',   href: '#industries' },
-  { label: 'About',        href: '#about' },
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/services' },
+  { label: 'About Us', href: '/about' },
+  { label: 'Contact Us', href: '/contact' },
 ]
 
 export const HERO_SLIDES: HeroSlide[] = [

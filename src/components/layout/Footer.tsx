@@ -5,8 +5,8 @@ import { Facebook, Linkedin, Twitter, Youtube } from 'lucide-react'
 import { scrollToSection } from '@/lib/utils'
 import logo from '@/assets/logo white.png'
 
-const SOLUTIONS = ['Energy Management System','Industrial IoT Platform','Way2Save Program','Smart Metering','Control Applications']
-const INDUSTRIES_LIST = ['Manufacturing & Steel','Petro Chemical','Power & Utilities','Oil & Gas','Smart Cities']
+const SOLUTIONS = ['Energy Management System', 'Industrial IoT Platform', 'Way2Save Program', 'Smart Metering', 'Control Applications']
+const INDUSTRIES_LIST = ['Manufacturing & Steel', 'Petro Chemical', 'Power & Utilities', 'Oil & Gas', 'Smart Cities']
 
 export function Footer() {
   return (
@@ -73,10 +73,19 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/[0.06] max-w-[1320px] mx-auto px-5 py-5 flex items-center justify-between flex-wrap gap-3">
-        <span className="text-[0.71rem] text-white/25">© 2025 Atreya IoT and Automation. All rights reserved.</span>
-        <div className="flex items-center gap-2 font-mono text-[0.68rem] text-green">
-          <span className="w-[7px] h-[7px] rounded-full bg-green animate-pulse-dot" />
-          All Systems Online
+        <span className="text-[0.71rem] text-white/25">
+          © 2025 Atreya IoT and Automation. All Rights Reserved.
+        </span>
+
+        <div className="flex items-center gap-3 text-[0.8rem]">
+          <a
+            href="https://thedap.live"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-white/70 transition-colors duration-300"
+          >
+            Designed & Developed by <span className='text-red-400 font-bold'>DAP Tech Solutions</span>
+          </a>
         </div>
       </div>
     </footer>

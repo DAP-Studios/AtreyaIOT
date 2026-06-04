@@ -26,6 +26,12 @@ export const viewport: Viewport = {
   themeColor: '#0052CC',
 }
 
+import { Navbar } from '@/components/layout/Navbar'
+import { Footer } from '@/components/layout/Footer'
+import { ProgressBar } from '@/components/ui/ProgressBar'
+import { BackToTop } from '@/components/ui/BackToTop'
+import { PageLoader } from '@/components/ui/PageLoader'
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
@@ -37,8 +43,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
         />
       </head>
-      <body className="bg-white text-ink antialiased overflow-x-hidden">
-        {children}
+      <body className="bg-white text-ink antialiased overflow-x-hidden flex flex-col min-h-screen">
+        <PageLoader />
+        <ProgressBar />
+        <Navbar />
+        <main className="flex-grow">
+          {children}
+        </main>
+        <Footer />
+        <BackToTop />
       </body>
     </html>
   )

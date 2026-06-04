@@ -1,0 +1,339 @@
+AA T R E Y A
+I N D U S T R I A L  A U T O M A T I O N
+Industrial IoT
+& Process Monitoring
+Shift from Monitoring →  Management
+Centralized & single platform to digitize, monitor & optimize 
+industrial utilities, energy, quality and process operations —from 
+sensor to cloud.
+I N D I A U A E KSA BD A F R I C A
+Leader in Controlling & Management of Industrial 
+Utilities
+A T R E Y A Industrial IoT & Process Monitoring
+About Atreya
+Product & technology company in industrial automation
+Atreya is a product engineering and technology company in the field of industrial 
+automation, IoT and process monitoring. We design, manufacture and deploy 
+smart instrumentation, gateways, energy meters and centralized management 
+software that help industries digitize their operations, reduce losses and improve 
+uptime.
+Our portfolio spans the full IIoT stack —from field -grade sensors and 
+transmitters, through Modbus / 4G / WiFi gateways and DIN -rail I/O modules, to 
+a cloud SCADA platform with real -time dashboards, alerts and analytics.
+100%
+In-House R&DISO
+Certified QualityCPCB
+CompliantMade in
+INDIA📊 Analytics & IoT 🖥 SCADA
+📡 4G / 5G / WiFi 📱 Mobile App
+🤖Artificial 
+Intelligence 🌐Remote 
+Management
+🏭 In-House Mfg ☁ Cloud Storage
+Atreya Industrial Automation • www.atreya.in 2 / 16
+A T R E Y A Industrial IoT & Process Monitoring
+Process Instrumentation
+Field -grade transmitters for the most measured industrial variables
+Pressure Transmitter
+Normal & Smart variants
+■ Range: 0 –600 bar (configurable)
+■ Output: 4 –20 mA / 0 –10 VDC / Modbus RTU
+■ Accuracy: ±0.5% F.S. (smart: ±0.1%)
+■ IP65/67 stainless housing
+■ Field -configurable via HART (smart variant)
+■ Hazardous -area variants on request
+Temperature Transmitter
+RTD / Thermocouple / Universal
+■ Input: PT100, PT1000, K/J/T/E/N/R/S TC
+■ Range: −200 °C to +1000 °C
+■ Output: 4 –20 mA / RS485 Modbus
+■ Head -mount or DIN -rail mount
+■ Cold -junction compensation built -in
+■ Smart variant with diagnostics & loggingProcess Variables Covered
+Pressure bar, mbar, kg/cm², psi, mmHg
+Temperature °C, °F
+Flow kg/hr, m³/hr, Nm³/hr, L/min
+Level mm, cm, m, 0 –100 %
+Speed RPM
+Run Hours Operating -hour totaliser
+Weight g, kg, Tons
+Atreya Industrial Automation • www.atreya.in 3 / 16
+A T R E Y A Industrial IoT & Process Monitoring
+Flow & Utility Metering
+Electromagnetic, gas, and battery -operated flow measurement
+Electromagnetic Flow Meter
+AC powered • DN15 –DN1000
+■ For conductive liquids: water, ETP, slurry
+■ Accuracy: ±0.5 % of reading
+■ Bidirectional flow + totaliser
+■ Output: 4 –20 mA + pulse + Modbus RTU
+■ PTFE / hard -rubber liner options
+■ IP68 sensor / IP65 transmitter
+Battery -Operated EM Flow Meter
+5-year battery life
+■ No external power required
+■ Ideal for remote / no -grid installations
+■ Wireless data via NB -IoT / LoRa / 4G
+■ Internal data logger —6+ months
+■ Tamper -proof IP68 enclosure
+■ Auto -zero & low -flow cut -off
+Gas Flow Meter
+Thermal mass / vortex
+■ For air, N₂, CO₂, biogas, natural gas
+■ Direct mass -flow —no temperature/pressure 
+compensation needed
+■ Range: 0.5 –100 Nm³/hr (DN25)
+■ Modbus RTU + 4 –20 mA output
+■ Custody -transfer accuracy class
+Atreya Industrial Automation • www.atreya.in 4 / 16
+A T R E Y A Industrial IoT & Process Monitoring
+Energy Management
+3-phase smart energy meters with built -in connectivity
+Atreya Smart Energy MeterW I R E D  R S 4 8 5
+Energy Meter —Normal
+RS485 Modbus output for local SCADA / PLC integration
+Class 1 / 0.5S accuracy  •  3 -phase 4 -wire, MID compliant  •  kWh, 
+kVAh, kVArh, PF, harmonicsW i F i  2 . 4  G H z
+Energy Meter —WiFi
+Wireless connectivity to local LAN / hotspot, in -app config
+Class 1 / 0.5S accuracy  •  3 -phase 4 -wire, MID compliant  •  kWh, 
+kVAh, kVArh, PF, harmonics
+4 G  /  5 G  L T E
+Energy Meter —SIM (4G/5G)
+Standalone cellular reporting, no LAN required
+Class 1 / 0.5S accuracy  •  3 -phase 4 -wire, MID compliant  •  kWh, 
+kVAh, kVArh, PF, harmonicsE T H E R N E T  P o E
+Energy Meter —Ethernet
+Industrial Ethernet for plant -wide deployments
+Class 1 / 0.5S accuracy  •  3 -phase 4 -wire, MID compliant  •  kWh, 
+kVAh, kVArh, PF, harmonics
+Atreya Industrial Automation • www.atreya.in 5 / 16
+A T R E Y A Industrial IoT & Process Monitoring
+Industrial IoT Gateways
+Connect any RS485 device to the cloud —wired or wireless
+Atreya IoT GatewayAvailable Variants
+1RS485 → Ethernet Converter
+Plain protocol converter, no slave limit
+2RS485 → WiFi Gateway
+Slave -ID max 2 / 4 / 16 / 32
+3RS485 → 4G / 5G Gateway
+Slave -ID max 2 / 4 / 16 / 32 —cellular
+4RS485 → Ethernet Gateway
+Slave -ID max 2 / 4 / 16 / 32 —wired LAN
+K E Y  S P E C I F I C A T I O N S
+✓Modbus RTU / TCP ✓MQTT / REST / FTP ✓Internal storage 2 –3 mo.
+✓DIN-rail mount ✓10–28 VDC supply ✓OTA firmware update
+Atreya Industrial Automation • www.atreya.in 6 / 16
+A T R E Y A Industrial IoT & Process Monitoring
+I/O Modules & Gateways
+DI/DO and AI/AO modules with built -in connectivity
+D I G I T A L  I / O  M O D U L E S
+Channel Variants
+2-channel Normal / Smart
+4-channel Normal / Smart
+8-channel Normal / Smart
+16-channel Normal / Smart
+32-channel Normal / Smart
+Comms Options
+4G / 5G  •  WiFi  •  Ethernet  •  RS485
+Status sensing: ON / OFF / TRIP from breakers, contactors, 
+alarms —direct SCADA integration via Modbus.A N A L O G  I / O  M O D U L E S
+Channel Variants
+2-channel Normal / Smart
+4-channel Normal / Smart
+8-channel Normal / Smart
+16-channel Normal / Smart
+32-channel Normal / Smart
+Signal Range
+0–10 V  •  4 –20 mA  •  0 –5 V  •  ±10 V
+16-bit resolution, isolated channels, scalable engineering 
+units configurable from app or web.RS232 ↔ USB  •  RS485 ↔ USB
+Industrial -grade protocol converters
+✓Galvanic isolation 2.5 kV
+✓Auto baud -rate detection
+✓Surge & ESD protection built -in
+Atreya Industrial Automation • www.atreya.in 7 / 16
+A T R E Y A Industrial IoT & Process Monitoring
+Temperature & Universal Input Solutions
+Indicators, controllers and multi -channel scanners
+Temperature Indicator
+Universal input
+■ Accepts: RTD, TC, mV, 4 –20 mA, 0 –10 V
+■ Bright 4 -digit LED display
+■ Configurable engineering units
+■ Panel mount 96 ×96 mm
+■ Optional RS485 Modbus output
+Temperature Controller
+PID + ON/OFF
+■ Auto -tune PID with ramp/soak profiles
+■ 2 relay + 1 SSR output
+■ High/low alarm with hysteresis
+■ Process value retransmission 4 –20 mA
+■ RS485 Modbus + smart variant w/ loggingM U L T I -C H AN N E L  S C AN N E R
+4 / 8 / 16 / 24 Channel
+•  Universal input (RTD / TC / mA / V)
+•  Scan rate 1 sec/channel
+•  Trend display & data logging
+•  Independent alarm setpoints
+•  RS485 Modbus + USB
+Atreya Industrial Automation • www.atreya.in 8 / 16
+A T R E Y A Industrial IoT & Process Monitoring
+Utility Monitoring System
+Water · Gas · Steam · N₂ —flow generation, consumption & analytics
+W A T E R
+m³ / kg / LG A S
+Nm³ / kgS T E A M
+kg / hrN I T R O G E N
+Nm³ / hr
+Real -Time Flow Measurement
+Flow Rate
+125.4 m³/hr
+LiveTotal Today
+2,847 m³
+24-hr
+Last Hour
+118.2 m³
+HourlyLast 15 min
+29.5 m³
+15-min
+Weekly Total
+18,432 m³
+WeeklyMonthly Total
+82,540 m³
+MonthlyConsumption Aggregation
+✓1 minute ✓15 minutes
+✓30 minutes ✓Hourly
+✓Daily ✓Weekly
+✓Monthly ✓Yearly
+Atreya Industrial Automation • www.atreya.in 9 / 16
+A T R E Y A Industrial IoT & Process Monitoring
+Compressor Monitoring
+Air · N₂ · Chiller —complete parameter coverage
+AI R  C O M P R ES S OR
+1
+■ Air discharge temperature
+■ Ambient temperature
+■ Cooling water / air inlet & outlet temp
+■ Screw oil separator ΔP
+■ Inlet / outlet pressure
+■ Run hour & load hour
+■ Air-flow generation & totaliser
+■ Plant -wise air consumption
+N₂C O M P R E S S OR  /  G E N E R AT O R
+2
+■ O₂ % concentration
+■ Inlet flow rate
+■ Air inlet pressure
+■ Air outlet pressure
+■ Run hour & load hour
+■ N₂ flow generation
+■ N₂ flow totaliser
+■ Plant -wise N₂ consumption
+C H I L L E R  C O M P R ES S OR
+3
+■ Suction & discharge pressure
+■ Suction & discharge temperature
+■ Chiller inlet / outlet temperature
+■ Condenser parameters
+■ Run hour & load hour
+■ Chilled -water flow
+■ Flow totaliser
+■ Cooling load (TR)
+Atreya Industrial Automation • www.atreya.in 10 / 16
+A T R E Y A Industrial IoT & Process Monitoring
+Quality Monitoring Systems
+CPCB -compliant continuous water & air quality monitoring
+Atreya Quality Monitoring Station💧W AT E R  Q U AL I T Y  S Y S T E M
+TOC Total Organic Carbon
+COD Chemical Oxygen Demand
+BOD Biochemical Oxygen Demand
+TSS Total Suspended Solids
+pH Hydrogen -ion concentration
+TDS Total Dissolved Solids
+Conductivity Electrical conductivity
+Flow With totaliser🌫AI R  Q U AL I T Y  S Y S T E M
+SO₂ Sulphur dioxide
+NOₓ Nitrogen oxides
+SPM Suspended Particulate Matter
+CO Carbon monoxide
+CO₂ Carbon dioxide
+VOC Volatile Organic Compounds
+C P C B  /  S P C B  C O M P L I AN T
+Direct API push to regulatory portals —Care Air Centre, OCEMS, ETP/STP 
+monitoring schemes.
+Atreya Industrial Automation • www.atreya.in 11 / 16
+A T R E Y A Industrial IoT & Process Monitoring
+DG & Motor Protection
+Asset monitoring for diesel generators & critical motors
+D I E S E L  G E N E R AT O R  M ON I T OR I N G
+Water Temperature Engine cooling water
+Oil TemperatureLube oil heat 
+monitoring
+Lube Oil PressurePre-trip & trip 
+thresholds
+MFM Electrical Data kW, V, A, PF, freq, kWh
+RPM Engine speed
+Fuel Level Tank -level sensor
+Vibration SensorBearing & coupling 
+health
+A U T O M A T I C  L O G  T O  C L O U D  •  S M S / E M A I L  O N  T R I P  •  D A I L Y  
+DG-U S A G E  R E P O R T SM O T O R  P R O T E C T I O N  D E V I C E
+✓Overcurrent (O/L) protection
+✓Under -voltage / phase failure
+✓Earth -fault detection
+✓Single -phase preventer
+✓Run-hour & start -counter
+✓RS485 Modbus + SCADA push
+DIGITAL COUNTER  •  Normal / Smart
+6-digit LED counter with high -speed input (5 kHz), preset & reset functions, pulse / contact / 
+NPN -PNP input compatibility. RS485 Modbus output for integration with SCADA / energy -billing 
+systems.
+Atreya Industrial Automation • www.atreya.in 12 / 16
+A T R E Y A Industrial IoT & Process Monitoring
+Busbar Temperature Monitoring
+Wireless WiFi sensors —prevent panel fires before they start
+Wireless Busbar Sensor —WiFi + BatteryWhy Wireless?
+Hot-spot detection on busbars, breakers and cable joints —without running fragile temperature cables 
+through live panels. Mount, pair, walk away.
+🌡Temperature Sensor
+−40 to +125 °C, ±0.5 °C accuracy💧Humidity Sensor
+0–100 % RH, condensation alert
+📡WiFi 2.4 GHz
+Direct to gateway, 100 m line -of-sight🔋5-Year Battery
+Replaceable CR123A or industrial Li -SOCl₂
+📱Mobile Pairing
+QR-code commissioning via Atreya app⚠Real -Time Alerts
+Threshold + rate -of-rise alarms
+Atreya Industrial Automation • www.atreya.in 13 / 16
+A T R E Y A Industrial IoT & Process Monitoring
+Central Management System
+One platform —every plant, every parameter, every report
+Centralized & single platform to digitize and optimize industrial operations across multiple plants, sites and utilities.
+📊Live Dashboard 📈Trends & Reports 🔔Alerts & Alarms 🏭Multi -Plant View
+📱Mobile App 🌐Remote 
+Management 🤖AI Analytics ⚡Energy Optimization
+📋Compliance Reports 🔐Role -Based Access 🔗ERP / SAP 
+Integration ☁Cloud + On -Premise
+Atreya Industrial Automation • www.atreya.in 14 / 16
+A T R E Y A Industrial IoT & Process Monitoring
+Solution Architecture
+End-to-end IIoT stack from sensor to cloud
+Atreya Industrial Automation • www.atreya.in 15 / 16
+A T R E Y A Industrial IoT & Process Monitoring
+Portfolio & Presence
+Trusted by industry across India and beyond
+500+
+Industries Served10k+
+Devices Deployed200+
+Plants Online15+
+CountriesISO 9001
+Certified
+INDUSTRIES WE SERVE
+Pharmaceutical Chemical
+Textile Food & Beverage
+Cement Steel
+Power Water Utilities
+Paper & Pulp Automotive
+Plastics Refining
+ATREYA INDUSTRIAL AUTOMATION 📍Gujarat, India    ✉sales@atreya.in    🌐www.atreya.in
+Atreya Industrial Automation • www.atreya.in 16 / 16

@@ -3,7 +3,7 @@ import { useEffect, useState, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
-import logoWhite from '@/assets/logo white.png'
+import logo from '@/assets/logo.png'
 
 // ── Progress Bar ──────────────────────
 export function ProgressBar() {
@@ -76,21 +76,16 @@ export function PageLoader() {
       initial={{ opacity: 1 }}
       animate={done ? { opacity: 0 } : { opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 z-[99999] bg-ink-2 flex items-center justify-center"
+      className="fixed inset-0 z-[99999] bg-white flex items-center justify-center"
     >
       <div className="text-center w-[260px]">
-        <div className="flex items-center justify-center gap-3 mb-8">
-          <div className="w-[52px] h-[52px] rounded-[14px] bg-white/[0.1] border border-white/20 flex items-center justify-center shadow-brand-lg overflow-hidden">
-            <Image src={logoWhite} alt="Atreya IoT" width={60} height={60} className="object-contain" priority />
-          </div>
-          <div>
-            <div className="font-areil font-bold text-lg text-white">Atreya<span className="text-cyan">IoT</span></div>
-          </div>
+        <div className="flex items-center justify-center mb-8">
+          <Image src={logo} alt="Atreya IoT" width={200} height={200} className="object-contain drop-shadow-sm" priority />
         </div>
-        <div className="h-[3px] bg-white/10 rounded-full overflow-hidden mb-4">
+        <div className="h-[3px] bg-ink/10 rounded-full overflow-hidden mb-4">
           <div className="loader-bar-progress h-full bg-gradient-to-r from-blue via-cyan to-yellow rounded-full" />
         </div>
-        <p className="font-mono text-[11px] text-white/40 tracking-widest">{status}</p>
+        <p className="font-mono text-[11px] text-ink/60 tracking-widest">{status}</p>
       </div>
     </motion.div>
   )
