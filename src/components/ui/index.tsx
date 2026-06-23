@@ -58,10 +58,12 @@ export function BackToTop() {
 
 // ── Page Loader ───────────────────────
 export function PageLoader() {
+  const [mounted, setMounted] = useState(false)
   const [done, setDone] = useState(false)
   const [status, setStatus] = useState('Initializing systems...')
 
   useEffect(() => {
+    setMounted(true)
     const msgs = ['Initializing systems...', 'Loading IoT modules...', 'Connecting cloud...', 'Ready.']
     let i = 0
     const iv = setInterval(() => { i = (i + 1) % msgs.length; setStatus(msgs[i]) }, 500)
@@ -69,7 +71,7 @@ export function PageLoader() {
     return () => { clearTimeout(timer); clearInterval(iv) }
   }, [])
 
-  if (done) return null
+  if (!mounted || done) return null
 
   return (
     <motion.div
@@ -104,28 +106,28 @@ interface SectionHeaderProps {
 
 export function SectionHeader({ eyebrow, title, titleEm, desc, center, light, className }: SectionHeaderProps) {
   return (
-    <div className={cn('mb-16', center && 'text-center', className)}>
+    <div className={cn('mb-14', center && 'text-center', className)}>
       <div className={cn(
-        'inline-flex items-center gap-2 px-[18px] py-[7px] rounded-full border mb-4 text-[0.7rem] font-bold tracking-[0.16em] uppercase',
+        'inline-flex items-center gap-2 border-l-2 pl-3 mb-4 text-[0.68rem] font-black tracking-[0.18em] uppercase',
         light
-          ? 'bg-white/12 border-white/22 text-white/85'
-          : 'bg-gradient-to-r from-blue/[0.08] to-cyan/[0.08] border-cyan/20 text-cyan-dark'
+          ? 'border-cyan text-white/80'
+          : 'border-cyan text-cyan-dark'
       )}>
         {eyebrow}
       </div>
       <h2 className={cn(
-        'font-display text-[clamp(2rem,3.4vw,3rem)] tracking-[-0.02em] leading-[1.1]',
+        'font-display text-[clamp(2.35rem,4.2vw,4.25rem)] font-bold leading-[0.96]',
         light ? 'text-white' : 'text-ink'
       )}>
         {title}
         {titleEm && (
-          <em className={cn('not-italic', light ? 'text-yellow' : 'italic text-blue')}> {titleEm}</em>
+          <em className={cn('not-italic', light ? 'text-cyan' : 'text-blue')}> {titleEm}</em>
         )}
       </h2>
       <div className={cn(
-        'w-[52px] h-1 rounded-full mt-4',
+        'w-[44px] h-[3px] mt-5',
         center && 'mx-auto',
-        light ? 'bg-gradient-to-r from-white/50 to-white/20' : 'bg-gradient-to-r from-blue via-cyan to-yellow'
+        light ? 'bg-cyan' : 'bg-blue-deep'
       )} />
       {desc && (
         <p className={cn(

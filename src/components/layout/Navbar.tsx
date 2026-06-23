@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -13,20 +13,26 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const pathname = usePathname()
+  const isHome = pathname === '/'
 
   useEffect(() => {
     const onScroll = () => {
-      setScrolled(window.scrollY > 10)
+      const revealPoint = isHome ? window.innerHeight - 96 : 10
+      setScrolled(window.scrollY > revealPoint)
     }
+    onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+  }, [isHome])
+
+  const hiddenOnHero = isHome && !scrolled && !mobileOpen
 
   return (
     <header
       className={cn(
-        'sticky top-0 z-[800] glass border-b border-border/60 transition-shadow duration-300',
-        scrolled ? 'shadow-brand-md' : 'shadow-brand-sm'
+        'fixed left-0 right-0 top-0 z-[800] border-b border-border/60 bg-white/88 backdrop-blur-xl transition-all duration-300',
+        scrolled ? 'shadow-brand-md' : 'shadow-brand-sm',
+        hiddenOnHero && '-translate-y-full opacity-0 pointer-events-none'
       )}
     >
       <div className="max-w-[1320px] mx-auto px-5 h-[72px] flex items-center justify-between gap-6">

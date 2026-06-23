@@ -22,21 +22,14 @@ const MARQUEE_ITEMS = [
 export function MarqueeStrip() {
   const doubled = [...MARQUEE_ITEMS, ...MARQUEE_ITEMS]
   return (
-    <div
-      className="overflow-hidden py-[14px]"
-      style={{
-        background: 'linear-gradient(90deg,#003A99,#0052CC,#00A8BB,#00D4E8,#009950,#00C96E,#E6B800,#FFD000,#003A99)',
-        backgroundSize: '400% 100%',
-        animation: 'marqueeShift 10s linear infinite',
-      }}
-    >
+    <div className="overflow-hidden border-y border-border bg-white py-[14px]">
       <div className="flex w-max animate-marquee gap-0">
         {doubled.map((item, i) => (
           <span
             key={i}
-            className="inline-flex items-center gap-2 text-[0.74rem] font-bold text-white/88 uppercase tracking-[0.1em] px-7 border-r border-white/18"
+            className="inline-flex items-center gap-2 border-r border-border px-7 text-[0.74rem] font-black uppercase tracking-[0.12em] text-blue-deep"
           >
-            <SiteIcon token={item.icon} className="text-yellow w-3.5 h-3.5" />
+            <SiteIcon token={item.icon} className="h-3.5 w-3.5 text-cyan-dark" />
             {item.label}
           </span>
         ))}
@@ -74,7 +67,7 @@ export function ExpertiseSection() {
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.7, delay: i * 0.14 }}
               whileHover={{ y: -12 }}
-              className="bg-white rounded-3xl overflow-hidden shadow-brand-sm border border-border group transition-shadow duration-300 hover:shadow-brand-lg"
+            className="group overflow-hidden rounded-[8px] border border-border bg-white shadow-brand-sm transition-shadow duration-300 hover:shadow-brand-md"
             >
               <div className="overflow-hidden h-[220px] relative">
                 <Image
@@ -85,7 +78,7 @@ export function ExpertiseSection() {
                   sizes="(max-width:768px) 100vw, 33vw"
                 />
                 <span
-                  className="absolute top-4 left-4 px-3 py-[5px] rounded-full text-[10px] font-extrabold tracking-[0.08em] uppercase backdrop-blur-sm"
+                  className="absolute left-4 top-4 border-l-2 px-3 py-[5px] text-[10px] font-black uppercase tracking-[0.12em] backdrop-blur-sm"
                   style={{ color: item.color, background: item.colorBg, border: `1px solid ${item.color}33` }}
                 >
                   {item.tag}
@@ -93,12 +86,12 @@ export function ExpertiseSection() {
               </div>
               <div className="p-7">
                 <div
-                  className="w-[52px] h-[52px] rounded-[12px] flex items-center justify-center text-[1.3rem] mb-4"
+                  className="mb-4 flex h-[48px] w-[48px] items-center justify-center rounded-[8px] text-[1.3rem]"
                   style={{ background: item.colorBg }}
                 >
                   <SiteIcon token={item.icon} className="w-5 h-5" />
                 </div>
-                <h3 className="font-display font-bold text-[1.1rem] text-ink mb-3">{item.title}</h3>
+                <h3 className="font-display mb-3 text-[1.45rem] font-bold leading-none text-ink">{item.title}</h3>
                 <p className="text-[0.86rem] text-slate leading-[1.72] mb-5">{item.desc}</p>
                 <button
                   onClick={() => scrollToSection(item.link)}

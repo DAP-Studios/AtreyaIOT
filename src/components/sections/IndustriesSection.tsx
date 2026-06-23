@@ -350,16 +350,8 @@ export function TestimonialsSection() {
 // ── CTA ──────────────────────────────
 export function CTASection() {
   return (
-    <section id="cta" className="relative overflow-hidden py-24">
-      <div
-        className="absolute inset-0"
-        style={{
-          background: 'linear-gradient(90deg, #E6B800, #FFD000, #00D4E8, #0052CC, #00D4E8, #FFD000)',
-          backgroundSize: '400% 100%',
-          animation: 'ctaShift 6s ease-in-out infinite',
-        }}
-      />
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&q=80')] bg-cover bg-center opacity-10" />
+    <section id="cta" className="relative overflow-hidden bg-blue-deep py-24">
+      <div className="absolute inset-0 bg-grid opacity-20" />
 
       <div className="relative z-10 max-w-[1200px] mx-auto px-5">
         <motion.div
@@ -369,11 +361,11 @@ export function CTASection() {
           transition={{ duration: 0.75 }}
           className="text-center"
         >
-          <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/30 px-5 py-2 rounded-full mb-6 text-[0.7rem] font-bold text-white uppercase tracking-[0.15em]">
+          <div className="mb-6 inline-flex items-center gap-2 border-l-2 border-cyan pl-3 text-[0.7rem] font-black uppercase tracking-[0.16em] text-cyan">
             <SiteIcon token="rocket" className="w-3.5 h-3.5" /> Get Started Today
           </div>
-          <h2 className="font-display font-bold text-[clamp(2rem,3.8vw,3.2rem)] text-white tracking-[-0.02em] leading-[1.1] mb-5">
-            Ready to <em className="not-italic text-ink">Transform</em> Your Energy Operations?
+          <h2 className="font-display mb-5 text-[clamp(2.6rem,5vw,5.2rem)] font-bold leading-[0.95] text-white">
+            Ready to Transform Your Energy Operations?
           </h2>
           <p className="text-[0.96rem] text-white/85 leading-[1.75] mb-9">
             Let Atreya deploy the Way2Save program, Smart AI EMS, or a complete IoT solution — start reducing energy costs from day one.
@@ -383,14 +375,14 @@ export function CTASection() {
             <motion.button
               whileHover={{ y: -3, boxShadow: '0 12px 32px rgba(0,0,0,0.22)' }}
               whileTap={{ scale: 0.97 }}
-              className="flex items-center gap-2 bg-white text-blue font-extrabold text-[0.9rem] px-9 py-4 rounded-full shadow-[0_6px_24px_rgba(0,0,0,0.15)]"
+              className="flex items-center gap-2 rounded-[8px] bg-white px-9 py-4 text-[0.9rem] font-extrabold text-blue-deep shadow-[0_6px_24px_rgba(0,0,0,0.15)]"
             >
               <SiteIcon token="play" className="w-4 h-4" /> Request a Demo
             </motion.button>
             <motion.button
               whileHover={{ y: -3, background: 'rgba(255,255,255,0.22)' }}
               whileTap={{ scale: 0.97 }}
-              className="flex items-center gap-2 bg-white/12 backdrop-blur-sm text-white font-bold text-[0.9rem] px-9 py-4 rounded-full border border-white/55"
+              className="flex items-center gap-2 rounded-[8px] border border-white/55 bg-white/10 px-9 py-4 text-[0.9rem] font-bold text-white backdrop-blur-sm"
             >
               <SiteIcon token="download" className="w-4 h-4" /> Download Brochure
             </motion.button>
@@ -399,7 +391,7 @@ export function CTASection() {
           <div className="flex gap-5 justify-center flex-wrap">
             {['No upfront cost consultation', 'Free energy audit report', 'ROI guaranteed analysis'].map((chip) => (
               <span key={chip} className="flex items-center gap-2 text-[0.78rem] text-white/85 font-semibold">
-                <SiteIcon token="check" className="text-yellow w-3.5 h-3.5" />{chip}
+                <SiteIcon token="check" className="w-3.5 h-3.5 text-cyan" />{chip}
               </span>
             ))}
           </div>
@@ -410,38 +402,38 @@ export function CTASection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.75, delay: 0.12 }}
-          className="mt-14 rounded-3xl bg-ink/45 backdrop-blur-sm border border-white/25 p-6 md:p-8"
+          className="mt-14 rounded-[8px] border border-white/20 bg-white/[0.06] p-6 backdrop-blur-sm md:p-8"
         >
           <div className="flex items-center justify-center gap-2 mb-6 text-white font-bold uppercase tracking-[0.12em] text-[0.76rem]">
-            <span className="w-[18px] h-[2px] bg-yellow rounded" />
+            <span className="h-[2px] w-[18px] rounded bg-cyan" />
             Contact Section
-            <span className="w-[18px] h-[2px] bg-yellow rounded" />
+            <span className="h-[2px] w-[18px] rounded bg-cyan" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 text-left">
             {CONTACT_OFFICES.map((office) => (
-              <div key={office.title} className="rounded-2xl border border-white/20 bg-white/10 p-4">
+              <div key={office.title} className="rounded-[8px] border border-white/20 bg-white/10 p-4">
                 <p className="text-[0.82rem] text-white font-bold mb-2">{office.title}</p>
                 {office.address.map((line) => (
                   <p key={line} className="text-[0.78rem] text-white/80 leading-[1.5]">{line}</p>
                 ))}
                 <div className="mt-2.5 flex flex-col gap-1">
                   {office.phones.map((phone) => (
-                    <p key={phone} className="text-[0.78rem] text-yellow inline-flex items-center gap-1.5"><SiteIcon token="phone" className="w-3.5 h-3.5" /> {phone}</p>
+                    <p key={phone} className="inline-flex items-center gap-1.5 text-[0.78rem] text-cyan"><SiteIcon token="phone" className="w-3.5 h-3.5" /> {phone}</p>
                   ))}
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="mt-6 rounded-2xl border border-white/20 bg-white/10 p-4 md:p-5">
+          <div className="mt-6 rounded-[8px] border border-white/20 bg-white/10 p-4 md:p-5">
             <p className="text-[0.82rem] text-white font-bold mb-3 text-center">Email Contacts</p>
             <div className="flex flex-col md:flex-row md:flex-wrap items-center justify-center gap-3 md:gap-4">
               {CONTACT_EMAILS.map((email) => (
                 <a
                   key={email}
                   href={`mailto:${email}`}
-                  className="inline-flex items-center gap-2 text-[0.8rem] text-yellow hover:text-white transition-colors"
+                  className="inline-flex items-center gap-2 text-[0.8rem] text-cyan transition-colors hover:text-white"
                 >
                   <SiteIcon token="mail" className="w-4 h-4" />
                   {email}

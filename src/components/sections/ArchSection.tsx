@@ -1,12 +1,18 @@
 'use client'
 import { useRef, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { useInView } from 'react-intersection-observer'
 import CountUp from 'react-countup'
 import { ARCH_STEPS, STATS, MACGRID_MODULES } from '@/data'
 import { SectionHeader } from '@/components/ui/index'
 import { scrollToSection } from '@/lib/utils'
 import { SiteIcon } from '@/components/ui/SiteIcon'
+import emsDashboard from '@/assets/ems/ems-dashboard.jpg'
+import emsNodeHistory from '@/assets/ems/ems-node-history.jpg'
+import emsAerialMap from '@/assets/ems/ems-aerial-map.jpg'
+import emsLcdView from '@/assets/ems/ems-lcd-view.jpg'
+import emsAnalytics from '@/assets/ems/ems-analytics.jpg'
 
 // ── ARCHITECTURE ─────────────────────
 export function ArchitectureSection() {
@@ -104,46 +110,42 @@ export function ArchitectureSection() {
 }
 
 // ── STATS ────────────────────────────
+function StatItem({ stat, index }: { stat: (typeof STATS)[number]; index: number }) {
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.4 })
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      whileHover={{ background: 'rgba(255,255,255,0.06)' }}
+      className="flex-1 px-5 py-14 text-center transition-colors duration-300"
+    >
+      <span className="block mb-4">
+        <SiteIcon token={stat.icon} className="w-8 h-8 text-white mx-auto" />
+      </span>
+      <div className="flex items-baseline justify-center gap-1 mb-2">
+        <span className="font-display text-[clamp(2.5rem,5vw,4.6rem)] font-bold leading-none text-white">
+          {inView ? <CountUp end={stat.num} duration={2.8} /> : 0}
+        </span>
+        <span className="text-cyan font-bold text-[2rem]">{stat.sfx}</span>
+      </div>
+      <div className="text-[0.72rem] font-black uppercase tracking-widest text-white/55">{stat.label}</div>
+    </motion.div>
+  )
+}
+
 export function StatsSection() {
   return (
-    <section id="stats" className="relative overflow-hidden">
-      <div
-        className="absolute inset-0"
-        style={{
-          background: 'linear-gradient(135deg, #080F1E, #003A99 40%, #080F1E)',
-          backgroundSize: '200% 200%',
-          animation: 'statsBg 10s ease-in-out infinite',
-        }}
-      />
+    <section id="stats" className="relative overflow-hidden bg-blue-deep">
       <div className="absolute inset-0 bg-grid opacity-20" />
 
       <div className="relative z-10 max-w-[1320px] mx-auto flex divide-x divide-white/10">
-        {STATS.map((stat, i) => {
-          const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.4 })
-          return (
-            <motion.div
-              key={stat.id}
-              ref={ref}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-              whileHover={{ background: 'rgba(255,255,255,0.04)' }}
-              className="flex-1 text-center py-14 px-5 transition-colors duration-300"
-            >
-              <span className="block mb-4">
-                <SiteIcon token={stat.icon} className="w-8 h-8 text-white mx-auto" />
-              </span>
-              <div className="flex items-baseline justify-center gap-1 mb-2">
-                <span className="font-display font-bold text-[3.2rem] text-white leading-none">
-                  {inView ? <CountUp end={stat.num} duration={2.8} /> : 0}
-                </span>
-                <span className="text-yellow font-bold text-[2rem]">{stat.sfx}</span>
-              </div>
-              <div className="text-[0.72rem] font-semibold text-white/45 uppercase tracking-widest">{stat.label}</div>
-            </motion.div>
-          )
-        })}
+        {STATS.map((stat, i) => (
+          <StatItem key={stat.id} stat={stat} index={i} />
+        ))}
       </div>
     </section>
   )
@@ -178,6 +180,12 @@ export function MacgridSection() {
     { label:'PHASE C', value:85, unit:' kW', pct:85, color:'#00C96E' },
     { label:'P.FACTOR', value:'0.97', unit:'', pct:97, color:'#FFD000' },
   ]
+  const productScreens = [
+    { title: 'Node History', image: emsNodeHistory },
+    { title: 'Aerial Map', image: emsAerialMap },
+    { title: 'LCD View', image: emsLcdView },
+    { title: 'Analytics', image: emsAnalytics },
+  ]
   const { ref: mgRef, inView: mgInView } = useInView({ triggerOnce: true, threshold: 0.3 })
 
   return (
@@ -206,7 +214,7 @@ export function MacgridSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-60px' }}
             transition={{ duration: 0.75 }}
-            className="bg-ink-2 rounded-3xl overflow-hidden shadow-brand-xl border border-white/[0.06]"
+            className="overflow-hidden rounded-[8px] border border-white/[0.08] bg-ink-2 shadow-brand-xl"
           >
             {/* Titlebar */}
             <div className="bg-white/[0.04] border-b border-white/[0.07] px-5 py-[14px] flex items-center gap-3">
@@ -223,6 +231,12 @@ export function MacgridSection() {
             </div>
 
             <div className="p-6">
+              <Image
+                src={emsDashboard}
+                alt="Atreya EMS dashboard with consumption, cost, bar chart, and pie chart widgets"
+                className="mb-5 h-auto w-full rounded-[6px] border border-white/[0.08]"
+                sizes="(max-width: 1024px) 100vw, 620px"
+              />
               <div className="font-mono text-[10px] text-white/30 tracking-[1.8px] uppercase mb-4">Real-Time Power Consumption</div>
               {bars.map((b) => <AnimatedBar key={b.label} {...b} />)}
 
@@ -239,7 +253,7 @@ export function MacgridSection() {
                     animate={mgInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ delay: 0.6 }}
                     whileHover={{ background: 'rgba(255,255,255,0.1)' }}
-                    className="bg-white/[0.06] border border-white/[0.08] rounded-[12px] py-4 px-3 text-center cursor-default transition-colors"
+                    className="cursor-default rounded-[8px] border border-white/[0.08] bg-white/[0.06] px-3 py-4 text-center transition-colors"
                   >
                     <div className="font-display font-bold text-[1.3rem]" style={{ color: k.c }}>{k.v}</div>
                     <div className="text-[10px] text-white/35 mt-[3px]">{k.l}</div>
@@ -289,6 +303,20 @@ export function MacgridSection() {
               Smart AI EMS brings together real-time monitoring, historical data, billing, alerts, and SLD diagrams into a unified, user-friendly platform.
             </p>
 
+            <div className="mb-8 grid grid-cols-2 gap-3">
+              {productScreens.map((screen) => (
+                <div key={screen.title} className="overflow-hidden rounded-[8px] border border-border bg-white shadow-brand-sm">
+                  <Image
+                    src={screen.image}
+                    alt={`Atreya EMS ${screen.title} software screen`}
+                    className="h-24 w-full object-cover object-top"
+                    sizes="(max-width: 1024px) 50vw, 240px"
+                  />
+                  <div className="px-3 py-2 text-[0.72rem] font-bold text-blue-deep">{screen.title}</div>
+                </div>
+              ))}
+            </div>
+
             <div className="grid grid-cols-2 gap-3 mb-8">
               {MACGRID_MODULES.map((m, i) => (
                 <motion.div
@@ -298,7 +326,7 @@ export function MacgridSection() {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.07 }}
                   whileHover={{ x: 4, borderColor: '#00D4E8', boxShadow: '0 4px 20px rgba(0,82,204,0.08)' }}
-                  className="flex items-center gap-3 p-4 bg-cool rounded-[12px] border border-border transition-all duration-200 cursor-default"
+              className="flex cursor-default items-center gap-3 rounded-[8px] border border-border bg-white p-4 transition-all duration-200"
                 >
                   <div className="w-[36px] h-[36px] rounded-[8px] flex items-center justify-center text-[0.88rem] flex-shrink-0" style={{ background: m.bg, color: m.color }}>
                     <SiteIcon token={m.icon} className="w-4 h-4" />
@@ -315,7 +343,7 @@ export function MacgridSection() {
               whileHover={{ y: -3, boxShadow: '0 10px 32px rgba(0,82,204,0.38)' }}
               whileTap={{ scale: 0.97 }}
               onClick={() => scrollToSection('cta')}
-              className="flex items-center justify-center gap-2 w-full bg-gradient-primary text-white font-bold text-[0.86rem] py-4 rounded-full shadow-[0_4px_18px_rgba(0,82,204,0.22)]"
+            className="flex w-full items-center justify-center gap-2 rounded-[8px] bg-blue-deep py-4 text-[0.86rem] font-bold text-white shadow-[0_4px_18px_rgba(0,32,74,0.22)]"
             >
               Request Smart AI EMS Demo <SiteIcon token="arrow-right" className="w-4 h-4" />
             </motion.button>

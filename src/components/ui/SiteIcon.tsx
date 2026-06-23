@@ -95,11 +95,13 @@ const ICON_MAP: Record<string, any> = {
   'phone': Phone,
   'mail': Mail,
   'map-pin': MapPin,
+  'globe': Globe,
   'check': Check,
   'arrow-right': ArrowRight,
   'arrow-down': ArrowDown,
   'chevron-left': ChevronLeft,
   'chevron-right': ChevronRight,
+  'zap': Zap,
 }
 
 export function SiteIcon({ token, className }: { token: string; className?: string }) {
