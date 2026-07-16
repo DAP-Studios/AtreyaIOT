@@ -53,6 +53,7 @@ export interface Service {
   badgeSub: string
   badgeIcon: string
   badgeColor: string
+  applications: string[]
   features: ServiceFeature[]
 }
 

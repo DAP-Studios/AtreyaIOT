@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
+import Link from 'next/link'
 import { EXPERTISE, SERVICES } from '@/data'
 import { SectionHeader } from '@/components/ui/index'
 import { scrollToSection } from '@/lib/utils'
@@ -111,7 +112,7 @@ export function ExpertiseSection() {
 
 // ── SERVICES TABS ────────────────────
 export function ServicesSection() {
-  const [activeId, setActiveId] = useState('ems')
+  const [activeId, setActiveId] = useState(SERVICES[0]?.id ?? '')
   const active = SERVICES.find((s) => s.id === activeId)!
 
   return (
@@ -212,13 +213,15 @@ export function ServicesSection() {
               </div>
 
               <div className="flex gap-3 flex-wrap">
-                <motion.button
-                  whileHover={{ y: -3, boxShadow: '0 10px 32px rgba(0,82,204,0.38)' }}
-                  whileTap={{ scale: 0.97 }}
-                  className="flex items-center gap-2 bg-gradient-primary text-white font-bold text-[0.84rem] px-7 py-[13px] rounded-full shadow-[0_4px_18px_rgba(0,82,204,0.25)]"
-                >
-                  <SiteIcon token="arrow-right" className="w-4 h-4" /> Learn More
-                </motion.button>
+                <Link href={`/services/${active.id}`}>
+                  <motion.span
+                    whileHover={{ y: -3, boxShadow: '0 10px 32px rgba(0,82,204,0.38)' }}
+                    whileTap={{ scale: 0.97 }}
+                    className="inline-flex items-center gap-2 bg-gradient-primary text-white font-bold text-[0.84rem] px-7 py-[13px] rounded-full shadow-[0_4px_18px_rgba(0,82,204,0.25)]"
+                  >
+                    <SiteIcon token="arrow-right" className="w-4 h-4" /> Learn More
+                  </motion.span>
+                </Link>
                 <motion.button
                   whileHover={{ y: -3, background: '#EBF2FF' }}
                   whileTap={{ scale: 0.97 }}

@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
-import { NAV_ITEMS } from '@/data'
+import { NAV_ITEMS, SERVICES } from '@/data'
 import logo from '@/assets/icon.png'
 import { SiteIcon } from '@/components/ui/SiteIcon'
 
@@ -51,20 +51,53 @@ export function Navbar() {
 
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-1 flex-1 justify-center">
-          {NAV_ITEMS.map((item) => (
-            <Link
-              key={item.label}
-              href={item.href}
-              className={cn(
-                'px-[14px] py-[9px] rounded-[10px] text-[0.84rem] font-semibold transition-all duration-200',
-                pathname === item.href
-                  ? 'bg-cool text-blue'
-                  : 'text-slate hover:bg-cool hover:text-blue'
-              )}
-            >
-              {item.label}
-            </Link>
-          ))}
+          {NAV_ITEMS.map((item) => {
+            if (item.href === '/services') {
+              return (
+                <div key={item.label} className="group relative">
+                  <Link
+                    href={item.href}
+                    className={cn(
+                      'inline-flex items-center gap-1 px-[14px] py-[9px] rounded-[10px] text-[0.84rem] font-semibold transition-all duration-200',
+                      pathname === item.href || pathname.startsWith('/services/')
+                        ? 'bg-cool text-blue'
+                        : 'text-slate hover:bg-cool hover:text-blue'
+                    )}
+                  >
+                    {item.label}
+                    <SiteIcon token="arrow-down" className="h-3.5 w-3.5" />
+                  </Link>
+                  <div className="invisible absolute left-1/2 top-full z-50 mt-2 w-[280px] -translate-x-1/2 rounded-[10px] border border-border bg-white p-2 opacity-0 shadow-brand-lg transition-all duration-200 group-hover:visible group-hover:opacity-100">
+                    {SERVICES.map((service) => (
+                      <Link
+                        key={service.id}
+                        href={`/services/${service.id}`}
+                        className="flex items-center gap-2 rounded-[8px] px-3 py-2 text-[0.8rem] font-semibold text-slate transition-colors hover:bg-cool hover:text-blue"
+                      >
+                        <SiteIcon token={service.icon} className="h-3.5 w-3.5" />
+                        {service.title}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )
+            }
+
+            return (
+              <Link
+                key={item.label}
+                href={item.href}
+                className={cn(
+                  'px-[14px] py-[9px] rounded-[10px] text-[0.84rem] font-semibold transition-all duration-200',
+                  pathname === item.href
+                    ? 'bg-cool text-blue'
+                    : 'text-slate hover:bg-cool hover:text-blue'
+                )}
+              >
+                {item.label}
+              </Link>
+            )
+          })}
         </nav>
 
         {/* Actions */}
@@ -108,14 +141,30 @@ export function Navbar() {
           >
             <div className="max-w-[1320px] mx-auto px-5 py-4 flex flex-col gap-1">
               {NAV_ITEMS.map((item) => (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="text-left px-4 py-3 rounded-xl text-[0.92rem] font-semibold text-slate hover:bg-cool hover:text-blue transition-all duration-200"
-                >
-                  {item.label}
-                </Link>
+                <div key={item.label}>
+                  <Link
+                    href={item.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="block text-left px-4 py-3 rounded-xl text-[0.92rem] font-semibold text-slate hover:bg-cool hover:text-blue transition-all duration-200"
+                  >
+                    {item.label}
+                  </Link>
+                  {item.href === '/services' && (
+                    <div className="mb-2 ml-6 mr-2 rounded-[10px] border border-border bg-snow p-2">
+                      {SERVICES.map((service) => (
+                        <Link
+                          key={service.id}
+                          href={`/services/${service.id}`}
+                          onClick={() => setMobileOpen(false)}
+                          className="flex items-center gap-2 rounded-[8px] px-3 py-2 text-[0.78rem] font-semibold text-slate hover:bg-white hover:text-blue"
+                        >
+                          <SiteIcon token={service.icon} className="h-3.5 w-3.5" />
+                          {service.title}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
               <div className="pt-3 mt-2 border-t border-border flex gap-3">
                 <Link

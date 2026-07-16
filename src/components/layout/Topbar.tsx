@@ -12,7 +12,7 @@ export function Topbar() {
             <SiteIcon token="mail" className="text-cyan w-3.5 h-3.5" /> info@atreyaiot.com
           </a>
           <a href="tel:+917900000000" className="flex items-center gap-2 text-white/55 text-xs hover:text-yellow transition-colors duration-200">
-            <SiteIcon token="phone" className="text-cyan w-3.5 h-3.5" /> +91 79 XXXX XXXX
+            <SiteIcon token="phone" className="text-cyan w-3.5 h-3.5" /> +91 79000 00000
           </a>
           <span className="flex items-center gap-2 text-white/55 text-xs">
             <SiteIcon token="map-pin" className="text-cyan w-3.5 h-3.5" /> Ahmedabad, Gujarat

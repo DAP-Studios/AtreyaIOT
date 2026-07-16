@@ -1,8 +1,0 @@
- ⚠ Port 3000 is in use, trying 3001 instead.
- ⚠ Port 3001 is in use, trying 3002 instead.
- ⨯ ./src/assets/logo.png
-Error: ENOENT: no such file or directory, open 'T:\DAP Tech\AtreyaIOT\atreya-ts\src\assets\logo.png'
-
-Import trace for requested module:
-./src/assets/logo.png
-./src/components/sections/HeroSection.tsx

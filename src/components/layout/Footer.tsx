@@ -1,11 +1,12 @@
 "use client"
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { Facebook, Linkedin, Twitter, Youtube } from 'lucide-react'
 import { scrollToSection } from '@/lib/utils'
+import { SERVICES } from '@/data'
 import logo from '@/assets/logo white.png'
 
-const SOLUTIONS = ['Energy Management System', 'Industrial IoT Platform', 'Way2Save Program', 'Smart Metering', 'Control Applications']
 const INDUSTRIES_LIST = ['Manufacturing & Steel', 'Petro Chemical', 'Power & Utilities', 'Oil & Gas', 'Smart Cities']
 
 export function Footer() {
@@ -44,11 +45,11 @@ export function Footer() {
             Solutions
           </h4>
           <ul className="flex flex-col gap-[9px]">
-            {SOLUTIONS.map((s) => (
-              <li key={s}>
-                <button onClick={() => scrollToSection('services')} className="text-[0.8rem] text-white/40 hover:text-cyan flex items-center gap-2 transition-colors duration-200">
-                  <span className="text-[9px] text-cyan">›</span>{s}
-                </button>
+            {SERVICES.map((service) => (
+              <li key={service.id}>
+                <Link href={`/services/${service.id}`} className="text-[0.8rem] text-white/40 hover:text-cyan flex items-center gap-2 transition-colors duration-200">
+                  <span className="text-[9px] text-cyan">›</span>{service.title}
+                </Link>
               </li>
             ))}
           </ul>
