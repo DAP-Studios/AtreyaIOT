@@ -11,9 +11,9 @@ export default function Home() {
     <>
       <HeroSection />
       <MarqueeStrip />
+      <StatsSection />
       <ExpertiseSection />
       <ServicesSection />
-      <StatsSection />
       <MacgridSection />
       <CTASection />
     </>

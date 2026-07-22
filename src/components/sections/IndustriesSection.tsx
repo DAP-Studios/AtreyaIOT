@@ -153,7 +153,7 @@ export function BenefitsSection() {
               className="absolute -bottom-7 -right-7 bg-white rounded-2xl p-6 shadow-brand-xl border border-border min-w-[220px]"
             >
               <div className="flex items-center gap-2 text-[0.85rem] font-bold text-ink mb-4">
-                <SiteIcon token="📊" className="w-4 h-4" /> Live Performance
+                <SiteIcon token="bar-chart-3" className="w-4 h-4" /> Live Performance
               </div>
               {[
                 { label: 'Power Factor', val: '0.97', pct: 97, color: '#0052CC' },
@@ -253,7 +253,7 @@ export function AboutSection() {
             whileHover={{ y: -6, background: 'rgba(255,255,255,0.16)' }}
             className="glass-dark border border-white/18 rounded-3xl p-10 transition-all duration-300"
           >
-            <div className="w-[58px] h-[58px] rounded-[14px] bg-white/12 border border-white/18 flex items-center justify-center text-[1.5rem] mb-6"><SiteIcon token="🌍" className="w-7 h-7 text-white" /></div>
+            <div className="w-[58px] h-[58px] rounded-[14px] bg-white/12 border border-white/18 flex items-center justify-center text-[1.5rem] mb-6"><SiteIcon token="globe" className="w-7 h-7 text-white" /></div>
             <h3 className="font-display font-bold text-[1.65rem] text-yellow mb-4">Our Vision</h3>
             <p className="text-[0.9rem] text-white/80 leading-[1.78]">
               To be among the global leaders in the management and conservation of Energy and the Environment — delivering intelligent systems that power a sustainable future for all.
@@ -269,7 +269,7 @@ export function AboutSection() {
             whileHover={{ y: -6, background: 'rgba(255,255,255,0.16)' }}
             className="glass-dark border border-white/18 rounded-3xl p-10 transition-all duration-300"
           >
-            <div className="w-[58px] h-[58px] rounded-[14px] bg-white/12 border border-white/18 flex items-center justify-center text-[1.5rem] mb-6"><SiteIcon token="⚡" className="w-7 h-7 text-white" /></div>
+            <div className="w-[58px] h-[58px] rounded-[14px] bg-white/12 border border-white/18 flex items-center justify-center text-[1.5rem] mb-6"><SiteIcon token="zap" className="w-7 h-7 text-white" /></div>
             <h3 className="font-display font-bold text-[1.65rem] text-yellow mb-4">Our Mission</h3>
             <p className="text-[0.9rem] text-white/80 leading-[1.78] mb-5">
               To help customers save energy and the environment through expertise and innovation in consulting and products.

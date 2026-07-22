@@ -17,14 +17,14 @@ import emsAnalytics from '@/assets/ems/ems-analytics.jpg'
 // ── ARCHITECTURE ─────────────────────
 export function ArchitectureSection() {
   const commItems = [
-    { icon: '📡', label: 'Data Cable' },
-    { icon: '🔆', label: 'Fiber Optic' },
-    { icon: '🌐', label: 'Ethernet LAN' },
-    { icon: '📶', label: 'WiFi Wireless' },
-    { icon: '📱', label: 'GSM Modem' },
-    { icon: '📻', label: 'GPRS' },
-    { icon: '✉️', label: 'Auto Email' },
-    { icon: '💬', label: 'Auto SMS' },
+    { icon: 'link-2', label: 'Data Cable' },
+    { icon: 'lightbulb', label: 'Fiber Optic' },
+    { icon: 'globe', label: 'Ethernet LAN' },
+    { icon: 'wifi', label: 'WiFi Wireless' },
+    { icon: 'smartphone', label: 'GSM Modem' },
+    { icon: 'radio', label: 'GPRS' },
+    { icon: 'mail', label: 'Auto Email' },
+    { icon: 'message-square', label: 'Auto SMS' },
   ]
 
   return (
@@ -294,7 +294,7 @@ export function MacgridSection() {
             transition={{ duration: 0.75 }}
           >
             <div className="inline-flex items-center gap-2 px-[18px] py-[7px] rounded-full bg-blue/[0.08] border border-cyan/20 text-[0.7rem] font-bold text-cyan-dark tracking-[0.16em] uppercase mb-4">
-              <SiteIcon token="🧩" className="w-3.5 h-3.5" /> 8 Smart Modules
+              <SiteIcon token="blocks" className="w-3.5 h-3.5" /> 8 Smart Modules
             </div>
             <h3 className="font-display font-bold text-[2rem] text-ink tracking-[-0.02em] mb-4 leading-[1.2]">
               All-in-One EMS for Complete Energy Intelligence

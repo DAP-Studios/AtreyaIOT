@@ -10,14 +10,14 @@ import { SiteIcon } from '@/components/ui/SiteIcon'
 
 // ── MARQUEE ─────────────────────────
 const MARQUEE_ITEMS = [
-  { icon: '⚡', label: 'Smart Energy Management' },
-  { icon: '📡', label: 'Industrial IoT' },
-  { icon: '☁️', label: 'Cloud Platform' },
-  { icon: '🎚️', label: 'Smart Metering' },
-  { icon: '🌿', label: 'Way2Save Program' },
-  { icon: '🖥️', label: 'Smart AI EMS' },
-  { icon: '📊', label: 'SCADA Monitoring' },
-  { icon: '🛡️', label: 'Power Quality Audit' },
+  { icon: 'zap', label: 'Smart Energy Management' },
+  { icon: 'radio', label: 'Industrial IoT' },
+  { icon: 'cloud', label: 'Cloud Platform' },
+  { icon: 'sliders-horizontal', label: 'Smart Metering' },
+  { icon: 'leaf', label: 'Way2Save Program' },
+  { icon: 'monitor', label: 'Smart AI EMS' },
+  { icon: 'bar-chart-3', label: 'SCADA Monitoring' },
+  { icon: 'shield-check', label: 'Power Quality Audit' },
 ]
 
 export function MarqueeStrip() {

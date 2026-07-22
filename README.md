@@ -4,7 +4,7 @@ A production-ready **Next.js 14 + TypeScript** website for Atreya IoT & Automati
 
 ---
 
-## 🚀 Tech Stack
+## Tech Stack
 
 | Technology | Purpose |
 |------------|---------|
@@ -20,7 +20,7 @@ A production-ready **Next.js 14 + TypeScript** website for Atreya IoT & Automati
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 atreya-ts/
@@ -58,7 +58,7 @@ atreya-ts/
 
 ---
 
-## 🏃 Quick Start
+## Quick Start
 
 ```bash
 # 1. Install dependencies
@@ -77,7 +77,7 @@ npm run type-check
 
 ---
 
-## 🎨 Design Tokens (Tailwind)
+## Design Tokens (Tailwind)
 
 ```ts
 // Colors
@@ -100,7 +100,7 @@ bg-gradient-cta       → yellow → cyan → blue (animated)
 
 ---
 
-## 🧩 Key Components
+## Key Components
 
 ### `SectionHeader`
 ```tsx
@@ -125,7 +125,7 @@ Auto-dismisses after 2 seconds with a custom SVG logo animation and progress bar
 
 ---
 
-## 📦 Deploy
+## Deploy
 
 ### Vercel (recommended — zero config)
 ```bash
@@ -152,11 +152,11 @@ EXPOSE 3000
 
 ---
 
-## 📞 Contact
+## Contact
 
 **Atreya IoT & Automation**
-📍 Ahmedabad, Gujarat, India
-✉️ info@atreyaiot.com
+Ahmedabad, Gujarat, India
+info@atreyaiot.com
 
 ---
 
