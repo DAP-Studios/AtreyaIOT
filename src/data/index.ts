@@ -2,6 +2,16 @@ import type {
   HeroSlide, Stat, ExpertiseItem, Service, ArchStep,
   MacgridModule, Industry, Benefit, Testimonial, NavItem,
 } from '@/types'
+import dgMonitoring from '@/assets/services/dg-monitoring.png'
+import gasFlowMonitoring from '@/assets/services/gas-flow-monitoring.png'
+import hvacMonitoring from '@/assets/services/hvac-monitoring.png'
+import solarMonitoring from '@/assets/services/solar-monitoring.png'
+import steamMonitoring from '@/assets/services/steam-monitoring.png'
+import transformerMonitoring from '@/assets/services/transformer-monitoring.png'
+import upsMonitoring from '@/assets/services/ups-monitoring.png'
+import waterMonitoring from '@/assets/services/water-flow-monitoring.png'
+import airQualityMonitoring from '@/assets/services/air-qulity-monitoring.png'
+import compressedAirMonitoring from '@/assets/services/compressed-air-monitoring.png'
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'Home', href: '/' },
@@ -108,7 +118,7 @@ export const SERVICES: Service[] = [
     icon: 'zap',
     title: 'Diesel Generator Monitoring',
     desc: 'Live diagnostics for DG sets covering power, fuel, runtime, and engine health for reliable backup operations.',
-    image: 'https://images.unsplash.com/photo-1509395176047-4a66953fd231?w=800&q=80',
+    image: dgMonitoring,
     badgeTitle: 'DG Monitoring — Active',
     badgeSub: 'Generator performance and fuel tracking online',
     badgeIcon: 'zap',
@@ -127,7 +137,7 @@ export const SERVICES: Service[] = [
     icon: 'radio',
     title: 'Gas Flow Monitoring',
     desc: 'Continuous gas flow intelligence for utilities and process lines with anomaly alerts and consumption trends.',
-    image: 'https://images.unsplash.com/photo-1565608189266-25f6b9f0a8a1?w=800&q=80',
+    image: gasFlowMonitoring,
     badgeTitle: 'Gas Flow — Online',
     badgeSub: 'Line flow and pressure monitored continuously',
     badgeIcon: 'radio',
@@ -146,7 +156,7 @@ export const SERVICES: Service[] = [
     icon: 'waves',
     title: 'HVAC Monitoring',
     desc: 'Live visibility into AHU, FCU, chillers, and pumps for efficient HVAC operations and comfort control.',
-    image: 'https://images.unsplash.com/photo-1581090700227-1e8e8f1f6f2b?w=800&q=80',
+    image: hvacMonitoring,
     badgeTitle: 'HVAC Monitoring',
     badgeSub: 'Temperature and runtime optimization active',
     badgeIcon: 'waves',
@@ -165,7 +175,7 @@ export const SERVICES: Service[] = [
     icon: 'zap',
     title: 'Solar Plant Monitoring',
     desc: 'Comprehensive performance tracking for inverters, generation, and plant-level efficiency.',
-    image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80',
+    image: solarMonitoring,
     badgeTitle: 'Solar Monitoring',
     badgeSub: 'Generation and PR analytics live',
     badgeIcon: 'zap',
@@ -184,7 +194,7 @@ export const SERVICES: Service[] = [
     icon: 'sliders-horizontal',
     title: 'Steam Monitoring',
     desc: 'Monitor pressure, flow, and temperature across steam lines to improve thermal efficiency.',
-    image: 'https://images.unsplash.com/photo-1610433572201-110753c6cff9?w=800&q=80',
+    image: steamMonitoring,
     badgeTitle: 'Steam Network Monitoring',
     badgeSub: 'Boiler and process steam analytics enabled',
     badgeIcon: 'sliders-horizontal',
@@ -203,7 +213,7 @@ export const SERVICES: Service[] = [
     icon: 'plug',
     title: 'Transformer Monitoring',
     desc: 'Condition-based monitoring for transformers to improve reliability and reduce unscheduled downtime.',
-    image: 'https://images.unsplash.com/photo-1560009320-c0195891f949?w=800&q=80',
+    image: transformerMonitoring,
     badgeTitle: 'Transformer Health',
     badgeSub: 'Load and temperature trends online',
     badgeIcon: 'plug',
@@ -222,7 +232,7 @@ export const SERVICES: Service[] = [
     icon: 'monitor',
     title: 'UPS Monitoring',
     desc: 'End-to-end UPS and battery health visibility for mission-critical infrastructure.',
-    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80',
+    image: upsMonitoring,
     badgeTitle: 'UPS Monitoring',
     badgeSub: 'Battery and backup health continuously tracked',
     badgeIcon: 'monitor',
@@ -241,7 +251,7 @@ export const SERVICES: Service[] = [
     icon: 'waves',
     title: 'Water Monitoring',
     desc: 'Monitor flow, level, and pressure across water systems for conservation and process control.',
-    image: 'https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?w=800&q=80',
+    image: waterMonitoring,
     badgeTitle: 'Water Monitoring',
     badgeSub: 'Source-to-consumption visibility enabled',
     badgeIcon: 'waves',
@@ -260,7 +270,7 @@ export const SERVICES: Service[] = [
     icon: 'leaf',
     title: 'Air Quality Monitoring',
     desc: 'Ambient and indoor air quality monitoring for health, compliance, and operational control.',
-    image: 'https://images.unsplash.com/photo-1527489377706-5bf97e608852?w=800&q=80',
+    image: airQualityMonitoring,
     badgeTitle: 'AQ Monitoring',
     badgeSub: 'AQI, PM, and environmental trends active',
     badgeIcon: 'leaf',
@@ -279,7 +289,7 @@ export const SERVICES: Service[] = [
     icon: 'factory',
     title: 'Compressed Air Monitoring',
     desc: 'Compressed air performance and leakage analytics to improve utility efficiency.',
-    image: 'https://images.unsplash.com/photo-1581094794329-c8112c4e5190?w=800&q=80',
+    image: compressedAirMonitoring,
     badgeTitle: 'Compressed Air Network',
     badgeSub: 'Flow, pressure, and efficiency insights enabled',
     badgeIcon: 'factory',

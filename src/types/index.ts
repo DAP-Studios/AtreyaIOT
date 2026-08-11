@@ -42,13 +42,15 @@ export interface ServiceFeature {
   desc: string
 }
 
+import type { StaticImageData } from 'next/image'
+
 export interface Service {
   id: string
   label: string
   icon: string
   title: string
   desc: string
-  image: string
+  image: string | StaticImageData
   badgeTitle: string
   badgeSub: string
   badgeIcon: string
